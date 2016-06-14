@@ -38,6 +38,17 @@ import {Component, EventEmitter} from '@angular/core';
     `
 })
 export class Login {
+    view;
+    user;
+    role;
+    firebase_auth;
+    custom_inputs;
+    dictionary;
+    tr;
+    email;
+    password;
+    error;
+
     constructor() {
         this.view = 'start';
         this.user = new EventEmitter();
@@ -58,14 +69,12 @@ export class Login {
     }
     ngOnInit() {
         this.dictionary = this.dictionary || {};
-        console.log(this.dictionary);
-        for(let k in this.dictionary) {
-            console.log(k);
+        for (let k in this.dictionary) {
             this.tr[k] = this.dictionary[k];
         }
         this.firebase_auth.onAuthStateChanged(auth_data => {
-            if(auth_data) {
-                this.user.emit({email: auth_data.email, uid: auth_data.uid, role: this.role, custom_inputs: this.custom_inputs});
+            if (auth_data) {
+                this.user.emit({ email: auth_data.email, uid: auth_data.uid, role: this.role, custom_inputs: this.custom_inputs });
             } else {
                 this.user.emit(null);
             }
@@ -73,7 +82,7 @@ export class Login {
     }
     next() {
         let promise;
-        if(this.view === 'login') {
+        if (this.view === 'login') {
             promise = this.firebase_auth.signInWithEmailAndPassword(this.email, this.password);
         } else {
             promise = this.firebase_auth.createUserWithEmailAndPassword(this.email, this.password);
