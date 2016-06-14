@@ -1,0 +1,26 @@
+{
+  "name": "firebase3-ionic2-auth-component",
+  "version": "1.0.0",
+  "description": "Easy to use auth component for Firebase based Ionic2 applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yagger/firebase3-ionic2-auth-component.git"
+  },
+  "keywords": [
+    "ionic2",
+    "angular2",
+    "firebase",
+    "auth",
+    "login"
+  ],
+  "author": "Yagger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yagger/firebase3-ionic2-auth-component/issues"
+  },
+  "homepage": "https://github.com/Yagger/firebase3-ionic2-auth-component#readme"
+}
