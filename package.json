@@ -22,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/Yagger/firebase3-ionic2-auth-component/issues"
   },
-  "homepage": "https://github.com/Yagger/firebase3-ionic2-auth-component#readme"
+  "homepage": "https://github.com/Yagger/firebase3-ionic2-auth-component#readme",
+  "dependencies": {
+    "@angular/core": "^2.0.0-rc.1",
+    "rxjs": "^5.0.0-beta.6",
+    "zone.js": "^0.6.12"
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  }
 }
