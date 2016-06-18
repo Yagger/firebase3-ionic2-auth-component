@@ -44,7 +44,7 @@ export class LoginPage {
 ```
 
 ##### INPUT firebase_auth
-An instance if Firebase (version 3) auth. A sample of `./services/firebase` implementation.
+An instance of Firebase (version 3) auth. A sample of `./services/firebase` implementation.
 ```
 let _firebase = require('firebase');
 let config = {
